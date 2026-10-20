@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Anna Choerunnisa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #dff5ff, #ffe4f1);
+    color: #45445c;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(255,255,255,0.8);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #e982b1;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5c8db5;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e982b1;
+}
+
+section {
+    padding: 75px 10%;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 7px solid white;
+    box-shadow: 0 10px 30px #e8a5c5;
+    animation: melayang 3s ease-in-out infinite;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    color: #659fc9;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #e982b1;
+}
+
+.hero p {
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e982b1;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: #659fc9;
+}
+
+.judul {
+    text-align: center;
+    color: #659fc9;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.kartu {
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #c8dff0;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-5px);
+}
+
+.biodata {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.biodata p {
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+.skill {
+    display: inline-block;
+    background: #dff5ff;
+    color: #578db8;
+    padding: 12px 18px;
+    margin: 7px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.project {
+    border-left: 5px solid #e982b1;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    background: #d6efff;
+    padding: 25px;
+    text-align: center;
+    color: #5685a8;
+}
+
+.bintang {
+    position: fixed;
+    z-index: -1;
+    animation: jatuh 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes melayang {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes jatuh {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .hero img {
+        width: 190px;
+        height: 190px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎀 Anna's Portfolio</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#impian">Impian</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <p>🩵 Welcome to My Little World 🩷</p>
+        <h1>Hai, Aku <span>Anna!</span></h1>
+        <p>
+            Siswi SMK Panca Bhakti Rakit jurusan
+            Teknik Komputer dan Jaringan.
+            Senang belajar teknologi dan memasak.
+        </p>
+        <a href="#about" class="btn">Kenali Aku ✨</a>
+    </div>
+
+    <img
+      src="https://cdn.phototourl.com/member/2026-10-15-2a05e11e-2b92-456d-b85a-8808f16cf76f.jpg"
+      alt="Foto Anna Choerunnisa"
+      onerror="this.alt='Foto belum dapat ditampilkan'"
+    >
+</section>
+
+<section id="about">
+    <h2 class="judul">🌷 Tentang Saya</h2>
+    <div class="kartu">
+        <p>
+            Halo! Nama saya Anna Choerunnisa.
+            Saya adalah siswi SMK Panca Bhakti Rakit
+            dari jurusan Teknik Komputer dan Jaringan.
+            Saya memiliki hobi memasak dan tertarik
+            mempelajari dunia komputer serta jaringan.
+            Saya ingin terus belajar, mengembangkan
+            kemampuan, dan meraih masa depan yang cerah.
+        </p>
+    </div>
+
+    <div class="biodata">
+        <div class="kartu">
+            <p><b>👩 Nama:</b> Anna Choerunnisa</p>
+            <p><b>🏫 Sekolah:</b> SMK Panca Bhakti Rakit</p>
+            <p><b>💻 Jurusan:</b> TKJ</p>
+            <p><b>🍳 Hobi:</b> Memasak</p>
+        </div>
+        <div class="kartu">
+            <p><b>📍 Alamat:</b> Adipasir, Kedung Cengkong, RT 03/RW 03</p>
+            <p><b>🩺 Cita-cita:</b> Dokter</p>
+            <p><b>📱 Instagram:</b> @anchwdr_25</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="judul">💻 My Skills</h2>
+    <div class="kartu" style="text-align:center">
+        <span class="skill">Komputer 🖥️</span>
+        <span class="skill">Fiber Optik 🔌</span>
+        <span class="skill">Cisco Packet Tracer 🌐</span>
+        <span class="skill">HTML & CSS 🎨</span>
+    </div>
+</section>
+
+<section id="impian">
+    <h2 class="judul">🌈 Impian dan Harapan</h2>
+    <div class="kartu">
+        <p>
+            Impian saya adalah memiliki karier yang sukses
+            dan masa depan yang cerah. Saya ingin terus
+            belajar, mengembangkan kemampuan, memiliki
+            penghasilan sendiri, dan hidup mandiri.
+            Saya juga ingin membahagiakan kedua orang tua,
+            membantu keluarga, dan membalas perjuangan mereka.
+            Dengan kerja keras, doa, dan usaha, saya berharap
+            dapat mewujudkan semua impian saya.
+        </p>
+        <br>
+        <h3>🩺 Cita-cita: Menjadi Dokter</h3>
+        <p>
+            Saya ingin menjadi dokter agar dapat membantu
+            orang lain dan memberikan manfaat bagi masyarakat.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="judul">💌 Let's Connect!</h2>
+    <div class="kartu">
+        <p>Terima kasih sudah mengunjungi portofolio saya!</p>
+        <p>Senang bisa berbagi cerita dan impian dengan kalian 🩷</p>
+        <a
+          class="btn"
+          href="https://www.instagram.com/anchwdr_25/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kunjungi Instagram 📱
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>Made with 🩷 by Anna Choerunnisa</p>
+    <p>© 2026 My Pastel Portfolio ✨</p>
+</footer>
+
+<script>
+const hiasan = ["💗", "✨", "🌸", "🩵"];
+
+for (let i = 0; i < 18; i++) {
+    const elemen = document.createElement("div");
+    elemen.className = "bintang";
+    elemen.textContent =
+        hiasan[Math.floor(Math.random() * hiasan.length)];
+
+    elemen.style.left = Math.random() * 100 + "vw";
+    elemen.style.animationDelay = Math.random() * 8 + "s";
+    elemen.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+    elemen.style.fontSize =
+        (14 + Math.random() * 15) + "px";
+
+    document.body.appendChild(elemen);
+}
+</script>
+
+</body>
+</html>
